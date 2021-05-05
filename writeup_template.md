@@ -28,7 +28,7 @@ To explain the steps I am taking below example image.
 
 ![alt text][./test_images/solidYellowCurve2masked.jpg]
 
-Part1. Create a Masked image with detected edges and Region of Interest:
+**Part1.** _Create a Masked image with detected edges and Region of Interest:_**
    1. Converted Image to gray scale and apply Gaussian filter with KERNEL size = 3
       ![alt text][./images_for_writeup/solidYellowCurve2Gaussian.jpg]
 
@@ -39,9 +39,9 @@ Part1. Create a Masked image with detected edges and Region of Interest:
       ![alt text][./images_for_writeup/solidYellowCurve2ROI.jpg]
 
 
-Part2. In this part our goal is to highlight the detected edges. This is done using hough Transform and 
-       which results in a set of lines for both left and right lane.
-       To get only one line I took average of the left and right lines and used it to Draw on the image
+**Part2.** _Highlight the detected lanes on the original image:_**
+           This is done using hough Transform and which results in a set of lines for both left and right lane.
+            To get only one line I took average of the left and right lines and used it to Draw on the image
    1. Applied hough transform to the masked image resulted from step-3
       ![alt text][./images_for_writeup/solidYellowCurve2ROI.jpg]
    
