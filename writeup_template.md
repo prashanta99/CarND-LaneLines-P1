@@ -30,12 +30,15 @@ To explain the steps I am taking below example image.
 
 **Part1.** _Create a Masked image with detected edges and Region of Interest:_**
    1. Converted Image to gray scale and apply Gaussian filter with KERNEL size = 3
+      
       ![alt text][./images_for_writeup/solidYellowCurve2Gaussian.jpg]
 
    2. Identified edges using Canny edge detector 
+      
       ![alt text][./images_for_writeup/solidYellowCurve2Canny.jpg]
    
    3. Narrowed the detection area using Region of Interest
+      
       ![alt text][./images_for_writeup/solidYellowCurve2ROI.jpg]
 
 
@@ -43,9 +46,11 @@ To explain the steps I am taking below example image.
            This is done using hough Transform and which results in a set of lines for both left and right lane.
             To get only one line I took average of the left and right lines and used it to Draw on the image
    1. Applied hough transform to the masked image resulted from step-3
+      
       ![alt text][./images_for_writeup/solidYellowCurve2ROI.jpg]
    
    2. Take average of the lines and Draw those lines on the original image. This is done by merging the two images and applying weights. Below image is the finale result
+      
       ![alt text][./images_for_writeup/solidYellowCurve2ROI.jpg]
 
 ![alt text][image1]
